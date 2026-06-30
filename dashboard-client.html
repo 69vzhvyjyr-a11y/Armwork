@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Պատվիրատուի էջ - ArmWork</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Թեման բեռնում ենք շուտ, որ dark mode-ը չթարթի էջի բացման պահին -->
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="site-body">
+
+    <header class="site-header">
+        <div class="logo-area">
+            <div class="logo-box">AW</div>
+            <span class="brand-name">ArmWork</span>
+        </div>
+        
+        <div class="header-right">
+            <button class="theme-toggle-btn" id="theme-btn" title="Փոխել ռեժիմը">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+
+            <button class="chat-icon-btn" title="Նամակներ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span class="chat-badge"></span> 
+            </button>
+            
+            <div class="user-profile-badge">Կարեն Գրիգորյան</div>
+            <a href="main.html" class="logout-link">Դուրս գալ</a>
+        </div>
+    </header>
+
+    <main class="dashboard-layout">
+        
+        <aside class="sidebar-filters">
+            <details class="filter-dropdown" open>
+                <summary>Վահանակ</summary>
+                <ul class="filter-list">
+                    <li class="active">Իմ հայտարարությունները</li>
+                    <li>Ստացված դիմումներ <span class="status-badge status-badge-blue">Նոր</span></li>
+                    <li>Վճարումներ</li>
+                    <li>Կարգավորումներ</li>
+                </ul>
+            </details>
+        </aside>
+
+        <div class="main-dashboard-content">
+            
+            <div class="dashboard-action-header">
+                <div>
+                    <h2 class="section-title dashboard-title-compact">Ողջույն Կարեն Գրիգորյան</h2>
+                    <p class="dashboard-subtitle">Ահա ձեր ընթացիկ նախագծերի վիճակագրությունը:</p>
+                </div>
+                <button class="btn-create-job">+ Նոր հայտարարություն</button>
+            </div>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">Ակտիվ նախագծեր</span>
+                    <span class="stat-value">1</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Ծախսված գումար</span>
+                    <span class="stat-value">60,000 ֏</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Ստացված դիմումներ</span>
+                    <span class="stat-value">14</span>
+                </div>
+            </section>
+
+            <section class="jobs-list">
+                <h2 class="section-title">Ձեր տեղադրած հայտարարությունները</h2>
+
+                <div class="job-card">
+                    <div class="job-info">
+                        <h3 class="job-title">Landing Page-ի պատրաստում (HTML/CSS)</h3>
+                        <p class="job-company job-status-active">📊 Ստատուս՝ Ակտիվ</p> 
+                        <p class="job-desc">Հայտարարությունը տեղադրվել է 2 օր առաջ: Ստացվել է 14 դիմում ֆրիլանսերների կողմից:</p>
+                    </div>
+                    <div class="job-action">
+                        <span class="job-price">60,000 ֏</span>
+                        <button class="btn-apply btn-apply-success">Դիտել դիմումները</button>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <script src="js/dashboard-client.js"></script>
+</body>
+</html>
